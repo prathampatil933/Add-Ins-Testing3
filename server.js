@@ -31,8 +31,8 @@ import('node-fetch').then(fetch => {
         }
     });
 
-    // Serve static files (index.html, CSS, JavaScript, etc.)
-    app.use(express.static(path.join(__dirname, 'public')));
+    // Serve static files from the root directory
+    app.use(express.static(__dirname));
 
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
